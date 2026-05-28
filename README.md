@@ -3,7 +3,6 @@
 > 一个把森林呼吸节律与乐高拼砌结合的疗愈型交互网页。  
 > A meditative interactive workshop that pairs forest-breathing rhythms with Lego-style pixel building.
 
-![preview](./public/preview.png)
 
 ## 简介 / About
 
@@ -44,12 +43,6 @@ npm run preview  # 本地预览构建产物
 
 ## 部署 / Deployment
 
-### Vercel（推荐）
-
-1. 把项目推到 GitHub
-2. 登录 [vercel.com](https://vercel.com) → New Project → 选这个仓库
-3. 框架预设会自动识别为 Vite，直接 Deploy
-
 ### GitHub Pages
 
 需要先在 `vite.config.js` 加 `base: '/forest-puzzle/'`，然后：
@@ -75,10 +68,6 @@ src/
 ├── data/puzzles.js          26 个拼图蓝图与积木库存
 └── hooks/useForestAudio.js  Web Audio 森林环境音
 ```
-
-## 致谢 / Credits
-
-界面与拼图数据参考自 [Mori-Breath-Lego-Forest-](https://github.com/InfBre/Mori-Breath-Lego-Forest-) 的设计语言与蓝图集合，本项目基于其结构做了 React + 自定义动画的实现与扩展。
 
 ## License
 
