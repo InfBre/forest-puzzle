@@ -1,0 +1,53 @@
+.ambient-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  transition: filter 0.6s ease;
+}
+.ambient-layer.dim { filter: brightness(0.85); }
+
+.bg-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(60, 110, 80, 0.35) 0%, transparent 55%),
+    linear-gradient(180deg, #0c2018 0%, #08160e 60%, #050c08 100%);
+}
+
+.mist-puff {
+  position: absolute;
+  background: radial-gradient(ellipse at center,
+    rgba(160, 220, 180, 0.4) 0%,
+    rgba(120, 200, 150, 0.2) 35%,
+    transparent 70%);
+  filter: blur(45px);
+  border-radius: 50%;
+  mix-blend-mode: screen;
+}
+
+.mist-bloom {
+  position: absolute;
+  bottom: 5%;
+  left: 18%;
+  width: 480px;
+  height: 240px;
+  background: radial-gradient(ellipse at center,
+    rgba(180, 230, 200, 0.45) 0%,
+    rgba(140, 210, 170, 0.25) 40%,
+    transparent 75%);
+  filter: blur(50px);
+  border-radius: 50%;
+  mix-blend-mode: screen;
+}
+.mist-bloom-right { left: auto; right: 15%; bottom: 8%; }
+
+.sparks { position: absolute; inset: 0; }
+.spark {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(180, 230, 180, 0.55);
+  filter: blur(0.5px);
+  mix-blend-mode: screen;
+}

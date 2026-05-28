@@ -1,0 +1,44 @@
+.app-root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0a1810 0%, #050d09 100%);
+  color: #d8e4c8;
+}
+
+.app-main {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+  padding: 0 24px 24px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.sidebar {
+  overflow-y: auto;
+  padding: 14px 4px 14px 0;
+  scrollbar-width: thin;
+}
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(110, 200, 140, 0.15); border-radius: 3px; }
+
+.content {
+  position: relative;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+@media (max-width: 900px) {
+  .app-main {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+  }
+  .sidebar { max-height: none; }
+}
